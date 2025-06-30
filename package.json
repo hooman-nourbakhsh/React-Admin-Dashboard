@@ -11,8 +11,11 @@
   },
   "dependencies": {
     "@syncfusion/ej2-base": "^30.1.37",
+    "@syncfusion/ej2-react-popups": "^30.1.37",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-icons": "^4.7.1",
+    "react-router-dom": "^6.8.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.13.0",
