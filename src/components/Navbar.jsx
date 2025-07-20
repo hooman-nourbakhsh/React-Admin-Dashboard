@@ -60,6 +60,10 @@ const Navbar = () => {
             <MdKeyboardArrowDown className="text-gray-400 text-14" />
           </div>
         </TooltipComponent>
+        {/* component Cart */}
+        {/* component Chat */}
+        {/* component Notification*/}
+        {/* component UserProfile */}
       </div>
     </div>
   );

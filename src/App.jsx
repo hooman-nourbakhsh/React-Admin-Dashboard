@@ -1,9 +1,10 @@
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { TooltipComponent } from "@syncfusion/ej2-react-popups";
 import { FiSettings } from "react-icons/fi";
 import { useStateContext } from "./contexts/ContextProvider";
 import Sidebar from "./components/Sidebar";
 import Navbar from "./components/Navbar";
+import Ecommerce from "./pages/Ecommerce";
 import "./App.css";
 
 function App() {
@@ -25,7 +26,7 @@ function App() {
             </TooltipComponent>
           </div>
           {activeMenu ? (
-            <div className={`w-72 fixed shrink-0 z-[${isClicked.cart ? 10 : "10001"}] dark:bg-secondary-dark-bg bg-white`}>
+            <div className={`w-72 fixed shrink-0 dark:bg-secondary-dark-bg bg-white`} style={{ zIndex: isClicked.cart ? 10 : "10001" }}>
               <Sidebar />
             </div>
           ) : (
@@ -36,6 +37,11 @@ function App() {
           <div className={`dark:bg-main-dark-bg bg-gray-100 min-h-screen max-w-full grow ${activeMenu && "lg:pr-72"}`}>
             <div className="sticky top-0 left-0 bg-main-bg dark:bg-main-dark-bg navbar">
               <Navbar />
+            </div>
+            <div>
+              <Routes>
+                <Route path="/" element={<Ecommerce />} />
+              </Routes>
             </div>
           </div>
         </div>
