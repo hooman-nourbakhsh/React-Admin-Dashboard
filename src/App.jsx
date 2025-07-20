@@ -5,6 +5,7 @@ import { useStateContext } from "./contexts/ContextProvider";
 import Sidebar from "./components/Sidebar";
 import Navbar from "./components/Navbar";
 import Ecommerce from "./pages/Ecommerce";
+import Orders from "./pages/Orders";
 import "./App.css";
 
 function App() {
@@ -41,6 +42,7 @@ function App() {
             <div>
               <Routes>
                 <Route path="/" element={<Ecommerce />} />
+                <Route path="/orders" element={<Orders />} />
               </Routes>
             </div>
           </div>
