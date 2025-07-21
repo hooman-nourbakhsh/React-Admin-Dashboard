@@ -12,6 +12,8 @@ import Calendar from "./pages/Calendar";
 import Kanban from "./pages/Kanban";
 import Editor from "./pages/Editor";
 import ColorPicker from "./pages/ColorPicker";
+import Line from "./pages/Charts/Line";
+import Area from "./pages/Charts/Area";
 import "./utils/i18n";
 import "./App.css";
 
@@ -56,6 +58,8 @@ function App() {
                 <Route path="/kanban" element={<Kanban />} />
                 <Route path="/editor" element={<Editor />} />
                 <Route path="/color-picker" element={<ColorPicker />} />
+                <Route path="/line" element={<Line />} />
+                <Route path="/area" element={<Area />} />
               </Routes>
             </div>
           </div>
