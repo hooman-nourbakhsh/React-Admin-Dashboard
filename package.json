@@ -17,6 +17,7 @@
     "@syncfusion/ej2-react-inputs": "^30.1.37",
     "@syncfusion/ej2-react-kanban": "^30.1.37",
     "@syncfusion/ej2-react-popups": "^30.1.37",
+    "@syncfusion/ej2-react-richtexteditor": "^30.1.37",
     "@syncfusion/ej2-react-schedule": "^30.1.37",
     "cldr-data": "^36.0.4",
     "react": "^18.3.1",
