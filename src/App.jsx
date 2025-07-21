@@ -9,6 +9,7 @@ import Orders from "./pages/Orders";
 import Employess from "./pages/Employess";
 import Customers from "./pages/Customers";
 import Calendar from "./pages/Calendar";
+import Kanban from "./pages/Kanban";
 import "./utils/i18n";
 import "./App.css";
 
@@ -50,6 +51,7 @@ function App() {
                 <Route path="/employees" element={<Employess />} />
                 <Route path="/customers" element={<Customers />} />
                 <Route path="/calendar" element={<Calendar />} />
+                <Route path="/kanban" element={<Kanban />} />
               </Routes>
             </div>
           </div>
