@@ -6,6 +6,8 @@ import Sidebar from "./components/Sidebar";
 import Navbar from "./components/Navbar";
 import Ecommerce from "./pages/Ecommerce";
 import Orders from "./pages/Orders";
+import Employess from "./pages/Employess";
+import Customers from "./pages/Customers";
 import "./App.css";
 
 function App() {
@@ -43,6 +45,8 @@ function App() {
               <Routes>
                 <Route path="/" element={<Ecommerce />} />
                 <Route path="/orders" element={<Orders />} />
+                <Route path="/employees" element={<Employess />} />
+                <Route path="/customers" element={<Customers />} />
               </Routes>
             </div>
           </div>
