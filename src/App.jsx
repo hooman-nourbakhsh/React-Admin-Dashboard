@@ -14,6 +14,7 @@ import Editor from "./pages/Editor";
 import ColorPicker from "./pages/ColorPicker";
 import Line from "./pages/Charts/Line";
 import Area from "./pages/Charts/Area";
+import Bar from "./pages/Charts/Bar";
 import "./utils/i18n";
 import "./App.css";
 
@@ -60,6 +61,7 @@ function App() {
                 <Route path="/color-picker" element={<ColorPicker />} />
                 <Route path="/line" element={<Line />} />
                 <Route path="/area" element={<Area />} />
+                <Route path="/bar" element={<Bar />} />
               </Routes>
             </div>
           </div>
