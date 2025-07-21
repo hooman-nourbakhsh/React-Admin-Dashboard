@@ -9,17 +9,10 @@ import Orders from "./pages/Orders";
 import Employess from "./pages/Employess";
 import Customers from "./pages/Customers";
 import Calendar from "./pages/Calendar";
+import "./utils/i18n";
 import "./App.css";
 
-import { loadCldr } from "@syncfusion/ej2-base";
-import * as gregorian from "cldr-data/main/fa/ca-gregorian.json";
-import * as numbers from "cldr-data/main/fa/numbers.json";
-import * as timeZoneNames from "cldr-data/main/fa/timeZoneNames.json";
-import * as numberingSystems from "cldr-data/supplemental/numberingSystems.json";
-import * as weekData from "cldr-data/supplemental/weekData.json";
-
 function App() {
-  loadCldr(numberingSystems, gregorian, numbers, timeZoneNames, weekData);
   const { activeMenu, themeSettings, setThemeSettings, currentColor, currentMode, isClicked } = useStateContext();
 
   return (
