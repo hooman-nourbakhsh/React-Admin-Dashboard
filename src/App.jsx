@@ -16,6 +16,8 @@ import Line from "./pages/Charts/Line";
 import Area from "./pages/Charts/Area";
 import Bar from "./pages/Charts/Bar";
 import Pie from "./pages/Charts/Pie";
+import Financial from "./pages/Charts/Financial";
+import ColorMapping from "./pages/Charts/ColorMapping";
 import "./utils/i18n";
 import "./App.css";
 
@@ -64,6 +66,8 @@ function App() {
                 <Route path="/area" element={<Area />} />
                 <Route path="/bar" element={<Bar />} />
                 <Route path="/pie" element={<Pie />} />
+                <Route path="/financial" element={<Financial />} />
+                <Route path="/color-mapping" element={<ColorMapping />} />
               </Routes>
             </div>
           </div>
