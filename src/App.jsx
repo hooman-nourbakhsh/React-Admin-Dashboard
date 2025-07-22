@@ -18,6 +18,8 @@ import Bar from "./pages/Charts/Bar";
 import Pie from "./pages/Charts/Pie";
 import Financial from "./pages/Charts/Financial";
 import ColorMapping from "./pages/Charts/ColorMapping";
+import Pyramid from "./pages/Charts/Pyramid";
+import Stacked from "./pages/Charts/Stacked";
 import "./utils/i18n";
 import "./App.css";
 
@@ -68,6 +70,8 @@ function App() {
                 <Route path="/pie" element={<Pie />} />
                 <Route path="/financial" element={<Financial />} />
                 <Route path="/color-mapping" element={<ColorMapping />} />
+                <Route path="/pyramid" element={<Pyramid />} />
+                <Route path="/stacked" element={<Stacked />} />
               </Routes>
             </div>
           </div>
