@@ -1,6 +1,4 @@
-import { useContext } from "react";
-import { useState } from "react";
-import { createContext } from "react";
+import { createContext, useContext, useState } from "react";
 
 const StateContext = createContext();
 
@@ -15,7 +13,7 @@ export const ContextProvider = ({ children }) => {
   const [activeMenu, setActiveMenu] = useState(true);
   const [isClicked, setIsClicked] = useState(initialState);
   const [currentColor, setCurrentColor] = useState("#03C9D7");
-  const [currentMode, setCurrentMode] = useState("Dark");
+  const [currentMode, setCurrentMode] = useState("Light");
   const [themeSettings, setThemeSettings] = useState(false);
   const [screenSize, setScreenSize] = useState(undefined);
 
@@ -43,15 +41,16 @@ export const ContextProvider = ({ children }) => {
         isClicked,
         setIsClicked,
         currentColor,
+        setCurrentColor,
         currentMode,
         setCurrentMode,
         themeSettings,
         setThemeSettings,
-        setColor,
-        setMode,
         screenSize,
         setScreenSize,
         clickHandler,
+        setMode,
+        setColor
       }}>
       {children}
     </StateContext.Provider>

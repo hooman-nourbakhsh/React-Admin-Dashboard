@@ -15,7 +15,7 @@ import { financialChartData, FinancialPrimaryXAxis, FinancialPrimaryYAxis } from
 import { useStateContext } from "../../contexts/ContextProvider";
 import ChartsHeader from "../../components/ChartHeader";
 
-const date1 = new Date("2017,1,1");
+const date1 = new Date("2018,1,1");
 
 function filterValue(value) {
   if (value.x >= date1) {

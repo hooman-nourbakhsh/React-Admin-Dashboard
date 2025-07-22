@@ -20,6 +20,7 @@ import Financial from "./pages/Charts/Financial";
 import ColorMapping from "./pages/Charts/ColorMapping";
 import Pyramid from "./pages/Charts/Pyramid";
 import Stacked from "./pages/Charts/Stacked";
+import ThemeSettings from "./components/ThemeSettings";
 import "./utils/i18n";
 import "./App.css";
 
@@ -29,6 +30,7 @@ function App() {
   return (
     <div className={currentMode === "Dark" ? "dark" : ""}>
       <BrowserRouter>
+        {themeSettings && <ThemeSettings />}
         <div className="flex relative dark:bg-main-dark-bg">
           <div className="fixed left-4 bottom-4 z-[1000]">
             <TooltipComponent content={"تنظیمات"} position="TopRight">
@@ -57,6 +59,7 @@ function App() {
             <div>
               <Routes>
                 <Route path="/" element={<Ecommerce />} />
+                <Route path="/ecommerce" element={<Ecommerce />} />
                 <Route path="/orders" element={<Orders />} />
                 <Route path="/employees" element={<Employess />} />
                 <Route path="/customers" element={<Customers />} />

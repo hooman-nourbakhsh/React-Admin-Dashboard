@@ -7,9 +7,13 @@ import { BsChatLeft } from "react-icons/bs";
 import { RiNotification3Line } from "react-icons/ri";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import avatar from "../data/avatar.jpg";
+import Notification from "./Notification";
+import Chat from "./Chat";
+import Cart from "./Cart";
+import UserProfile from "./UserProfile";
 
 const NavButton = ({ title, customFunc, icon, color, dotColor }) => (
-  <TooltipComponent content={title} position="BottomCenter">
+  <TooltipComponent content={title} position="BottomLeft">
     <button type="button" onClick={customFunc} style={{ color }} className="relative text-xl rounded-full p-3 hover:bg-gray-100">
       <span style={{ background: dotColor }} className="absolute inline-flex rounded-full h-2 w-2 right-2 top-2" />
       {icon}
@@ -18,7 +22,7 @@ const NavButton = ({ title, customFunc, icon, color, dotColor }) => (
 );
 
 const Navbar = () => {
-  const { setActiveMenu, isClicked, handleClick, screenSize, setScreenSize, currentColor } = useStateContext();
+  const { setActiveMenu, isClicked, clickHandler, screenSize, setScreenSize, currentColor } = useStateContext();
 
   useEffect(() => {
     const handleResize = () => setScreenSize(window.innerWidth);
@@ -41,17 +45,17 @@ const Navbar = () => {
     <div className="flex dark:shadow-gray-800 shadow-sm justify-between p-2 shadow-gray-200 relative">
       <NavButton title="منو" customFunc={() => setActiveMenu((prev) => !prev)} color={currentColor} icon={<AiOutlineMenu />} />
       <div className="flex flex-row-reverse">
-        <NavButton title="سبد خرید" customFunc={() => handleClick("cart")} color={currentColor} icon={<FiShoppingCart />} />
-        <NavButton title="چت" customFunc={() => handleClick("chat")} color={currentColor} dotColor="#03c9d7" icon={<BsChatLeft />} />
+        <NavButton title="سبد خرید" customFunc={() => clickHandler("cart")} color={currentColor} icon={<FiShoppingCart />} />
+        <NavButton title="چت" customFunc={() => clickHandler("chat")} color={currentColor} dotColor="#03c9d7" icon={<BsChatLeft />} />
         <NavButton
           title="اطلاع رسانی"
-          customFunc={() => handleClick("notification")}
+          customFunc={() => clickHandler("notification")}
           color={currentColor}
           dotColor="#03c9d7"
           icon={<RiNotification3Line />}
         />
         <TooltipComponent enableRtl={true} content="پروفایل" position="BottomCenter">
-          <div className="flex items-center gap-2 cursor-pointer p-1 hover:bg-gray-100 rounded-lg" onClick={() => handleClick("userProfile")}>
+          <div className="flex items-center gap-2 cursor-pointer p-1 hover:bg-gray-100 rounded-lg" onClick={() => clickHandler("userProfile")}>
             <img src={avatar} alt="user-avatar" className="rounded-full w-8 h-8" />
             <p>
               <span className="text-gray-400 text-14">سلام،</span>
@@ -60,10 +64,10 @@ const Navbar = () => {
             <MdKeyboardArrowDown className="text-gray-400 text-14" />
           </div>
         </TooltipComponent>
-        {/* component Cart */}
-        {/* component Chat */}
-        {/* component Notification*/}
-        {/* component UserProfile */}
+        {isClicked.notification && <Notification />}
+        {isClicked.chat && <Chat />}
+        {isClicked.cart && <Cart />}
+        {isClicked.userProfile && <UserProfile />}
       </div>
     </div>
   );
